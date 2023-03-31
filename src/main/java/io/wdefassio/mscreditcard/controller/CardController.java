@@ -1,5 +1,6 @@
 package io.wdefassio.mscreditcard.controller;
 
+import io.wdefassio.mscreditcard.domain.Card;
 import io.wdefassio.mscreditcard.dto.CardsByClientResponse;
 import io.wdefassio.mscreditcard.dto.CardSaveRequest;
 import io.wdefassio.mscreditcard.service.CardService;
@@ -30,7 +31,7 @@ public class CardController {
     }
 
     @GetMapping(params = "income")
-    public ResponseEntity getAllCardsAvailableByIncome(@RequestParam("income") Long income) {
+    public ResponseEntity<List<Card>> getAllCardsAvailableByIncome(@RequestParam("income") Long income) {
         return ResponseEntity.ok(cardService.getCardByIncome(income));
     }
     @GetMapping(params = "cpf")

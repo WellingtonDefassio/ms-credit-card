@@ -1,5 +1,6 @@
 package io.wdefassio.mscreditcard.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import java.math.BigDecimal;
 @Entity
 @NoArgsConstructor
 @Data
+@AllArgsConstructor
 public class CardsClient {
 
     @Id
